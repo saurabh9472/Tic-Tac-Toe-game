@@ -1,0 +1,97 @@
+$container-side: 81vh;
+$box-side: 27vh;
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+
+    box-shadow: 0 0 5px #999, 0 0 10px #ccc;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        color: transparent;
+        background: linear-gradient(to bottom left, skyblue, slateblue);
+        -webkit-background-clip: text;
+        background-clip: text;
+        display: inline;
+
+        margin-left: 5vw;
+    }
+
+    .btns {
+        margin-right: 5vw;
+
+        .show,
+        .clear {
+            font-size: 1.1rem;
+            background: linear-gradient(to bottom left, skyblue, slateblue);
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 1vh;
+            border-radius: 1vh;
+            margin-left: 2vw;
+
+            &:active {
+                transform: scale(1.04);
+            }
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    top: 54vh; // 50vh + half of (header-height)
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    height: $container-side;
+    width: $container-side;
+
+    padding: 1%;
+    background-color: #fff;
+    border-radius: 2vh;
+    box-shadow: 0 0 10px #bbb, 0 0 15px #eee;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    .row {
+        display: flex;
+        height: 100%;
+
+        .box {
+            width: 100%;
+            color: #fff;
+            background: linear-gradient(to bottom left, skyblue, slateblue);
+            margin: 1vh;
+            border-radius: 2vh;
+
+            text-shadow: 0 0 5px lightseagreen;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 10em;
+            // box-shadow: inset 0 0 5px slateblue, inset 0 0 10px lightseagreen;
+        }
+    }
+}
